@@ -21,17 +21,15 @@ struct ImagePicker: UIViewControllerRepresentable {
             self.parent = parent
         }
 
-        
         func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            
-            let reposStorage: ReposStorage = ReposStorage()
             
             if let uiImage = info[.originalImage] as? UIImage {
                 if let data = uiImage.jpegData(compressionQuality: 0.8),
                    let localURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("image.jpg") {
                     do {
                         try data.write(to: localURL)
-                        // Envoyer l'image à Firebase Storage
+                        print(localURL)
+                        let reposStorage: ReposStorage = ReposStorage()
                         reposStorage.saveFile(localURL: localURL) { (error) in
                             if let error = error {
                                 print("Erreur lors de l'envoi de l'image : \(error.localizedDescription)")
@@ -94,17 +92,11 @@ struct ContentView: View {
             Button(action: {
                 
                 let reposStorage: ReposStorage = ReposStorage()
-                reposStorage.listFiles() { (images, error) in
+                reposStorage.loadFile(nameFile: "image.jpg") { localPath, error in
                     if let error = error {
-                        print("Erreur lors de l'envoi de l'image : \(error.localizedDescription)")
-                    } else {
-                        print("Image envoyée avec succès")
-                    }
-                    
-                    if let images = images {
-                      //
-                    } else {
-                        //
+                        print("Erreur lors du téléchargement du fichier : \(error.localizedDescription)")
+                    } else if let localPath = localPath {
+                        print("Téléchargement réussi. Le fichier a été enregistré à l'emplacement : \(localPath)")
                     }
                 }
                 

@@ -36,22 +36,20 @@ class ReposStorage {
         }
     }
     
-    
-    func listFiles(completion: @escaping ([String]?, Error?) -> Void) {
-        let storageRef = storage.reference(forURL: "gs://bestappever-eee4a.appspot.com").child("object3d/uid")
+    func loadFile(nameFile: String, urlLocal: String, completion: @escaping (String?, Error?) -> Void) {
+        let storageRef = storage.reference(forURL: "gs://bestappever-eee4a.appspot.com")
+        let islandRef = storageRef.child("object3d/" + nameFile)
         
-        storageRef.listAll { (result, error) in
-            if let error = error {}
-            for prefix in result!.prefixes {
-                print(prefix)
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let localURL = documentsDirectory.appendingPathComponent(nameFile)
+
+        let downloadTask = islandRef.write(toFile: localURL) { url, error in
+            if let error = error {
+                completion(nil, error)
+            } else {
+                completion(localURL.path, nil)
             }
-            
-            /*
-            for item in result!.items {
-                // The items under storageReference.
-            }
-            */
-            
         }
     }
+
 }
