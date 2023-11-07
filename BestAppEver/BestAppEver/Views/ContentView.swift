@@ -11,17 +11,29 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             VStack{
+                Text("App Name")
+                Spacer()
                 NavigationLink{
                     OCMainView()
                 } label: {
                     Text("Click Here to Start modeling!")
                 }
+                .padding(15)
+                .background(Color.yellow)
+                .clipShape(Capsule())
+                
                 NavigationLink{
                     LibrairyView()
                 } label: {
-                    Text("Librairy")
+                    Text("Acces to Librairy")
                 }
+                .padding(15)
+                .background(Color.yellow)
+                .clipShape(Capsule())
+                Spacer()
             }
+            
+            
         }
     }
 }

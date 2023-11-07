@@ -10,4 +10,6 @@ import Foundation
 struct FBDataModel: Identifiable{
     let id: Int
     let url: String
+    let name: String
+    let description: String
 }

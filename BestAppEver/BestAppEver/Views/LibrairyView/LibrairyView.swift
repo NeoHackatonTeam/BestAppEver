@@ -19,25 +19,15 @@ struct LibrairyView: View {
     
     var body: some View {
         NavigationStack{
-        ScrollView{
+            ScrollView{
                 LazyVGrid(columns: columns,
                           alignment: .leading){
                     ForEach(viewModel.listModel){ model in
-                        AsyncImage(url: URL(string: model.url))
-                        { img in
-                            img
-                                .resizable()
-                                .frame(width: 250, height: 250)
-                                .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                        } placeholder: {
-                            Image(systemName: "network.slash")
-                                .resizable()
-                                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
-                        }
-                        }
+                        LibrairyCell(model: model)
                     }
                 }
-            }.background(Color.black)
+            }.background(Color.yellow)
+        }
         }
 }
 
