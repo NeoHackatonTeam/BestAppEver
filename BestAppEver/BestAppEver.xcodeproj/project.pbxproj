@@ -23,7 +23,7 @@
 		F4CD1B252AFA422C000217BD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F4CD1B242AFA422C000217BD /* FirebaseFirestore */; };
 		F4CD1B292AFA422C000217BD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F4CD1B282AFA422C000217BD /* FirebaseFirestoreSwift */; };
 		F4CD1B3C2AFA4D4A000217BD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F4CD1B3B2AFA4D4A000217BD /* FirebaseStorage */; };
-		F4CD1B402AFA86B6000217BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4CD1B3F2AFA86B6000217BD /* GoogleService-Info.plist */; };
+		F4CD1B462AFA91BC000217BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4CD1B452AFA91BC000217BD /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 		F15AF8922AFA406600C6126A /* OCMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCMainView.swift; sourceTree = "<group>"; };
 		F15AF8982AFA4DB700C6126A /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataModel.swift; sourceTree = "<group>"; };
 		F4CD1B092AFA41CC000217BD /* reposStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reposStorage.swift; sourceTree = "<group>"; };
-		F4CD1B3F2AFA86B6000217BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F4CD1B452AFA91BC000217BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +79,7 @@
 		F15AF8732AFA3EAD00C6126A = {
 			isa = PBXGroup;
 			children = (
-				F4CD1B3F2AFA86B6000217BD /* GoogleService-Info.plist */,
+				F4CD1B452AFA91BC000217BD /* GoogleService-Info.plist */,
 				F15AF87E2AFA3EAD00C6126A /* BestAppEver */,
 				F15AF87D2AFA3EAD00C6126A /* Products */,
 				F4CD1B3A2AFA4D4A000217BD /* Frameworks */,
@@ -251,7 +251,7 @@
 			files = (
 				F15AF8872AFA3EAF00C6126A /* Preview Assets.xcassets in Resources */,
 				F15AF8842AFA3EAF00C6126A /* Assets.xcassets in Resources */,
-				F4CD1B402AFA86B6000217BD /* GoogleService-Info.plist in Resources */,
+				F4CD1B462AFA91BC000217BD /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,7 +406,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
-				DEVELOPMENT_TEAM = 42GM3S2U7Q;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";
@@ -438,7 +438,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
-				DEVELOPMENT_TEAM = 42GM3S2U7Q;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";

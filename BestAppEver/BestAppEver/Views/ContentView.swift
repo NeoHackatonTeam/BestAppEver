@@ -126,10 +126,10 @@ struct ContentView: View {
             Button(action: {
                 
                 let reposStorage: ReposStorage = ReposStorage()
-                reposStorage.loadFile(typeFile: FileType.image, nameFile: "image.jpg", urlLocal: "path/to/your/Hackaton/") {
+                reposStorage.loadFile(typeFile: FileType.image, nameFile: "9B370804-EE40-49A6-921A-E7E51BBD6A51_image.jpg") {
                     localPath, error in
                     if let error = error {
-                        print("Erreur lors du téléchargement du fichier : \(error.localizedDescription)")
+                        print("Erreur lors du téléchargement du fichier : \(error)")
                     } else if let localPath = localPath {
                         print("Téléchargement réussi. Le fichier a été enregistré à l'emplacement : \(localPath)")
                     }

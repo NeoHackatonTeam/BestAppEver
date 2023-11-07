@@ -50,14 +50,15 @@ class ReposStorage {
         }
     }
 
-    func loadFile(typeFile: FileType, nameFile: String, urlLocal: String, completion: @escaping (String?, Error?) -> Void) {
+    func loadFile(typeFile: FileType, nameFile: String, completion: @escaping (String?, Error?) -> Void) {
         let storageRef = storage.reference(forURL: urlStorage)
         let islandRef = storageRef.child(typeFile.toString() + "/" + nameFile)
 
-        // Utilisez directement l'URL fournie dans urlLocal
-        let localURL = URL(fileURLWithPath: urlLocal)
-
-        let downloadTask = islandRef.write(toFile: localURL) { url, error in
+        let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let localURL = documentsDirectory.appendingPathComponent(nameFile)
+        
+        let downloadTask = islandRef.write(toFile: localURL) { 
+            url, error in
             if let error = error {
                 completion(nil, error)
             } else {
