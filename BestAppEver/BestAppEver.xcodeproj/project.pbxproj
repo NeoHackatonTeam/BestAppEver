@@ -63,12 +63,9 @@
 		F15AF87E2AFA3EAD00C6126A /* BestAppEver */ = {
 			isa = PBXGroup;
 			children = (
-<<<<<<< HEAD
+				F15AF8962AFA4D2300C6126A /* ObjectCapture */,
 				F15AF8902AFA3FA900C6126A /* Views */,
-				F15AF88F2AFA3F9400C6126A /* ObjectCapture */,
-=======
 				EA57DF7B2AFA401100BA8E8A /* ViewController */,
->>>>>>> 8a57ba075aa67cb57132f739767f9419b079c1ce
 				F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */,
 				F15AF8832AFA3EAF00C6126A /* Assets.xcassets */,
 				F15AF8852AFA3EAF00C6126A /* Preview Content */,
@@ -82,14 +79,6 @@
 				F15AF8862AFA3EAF00C6126A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		F15AF88F2AFA3F9400C6126A /* ObjectCapture */ = {
-			isa = PBXGroup;
-			children = (
-				F15AF8942AFA48DF00C6126A /* Models */,
-			);
-			path = ObjectCapture;
 			sourceTree = "<group>";
 		};
 		F15AF8902AFA3FA900C6126A /* Views */ = {
@@ -109,7 +98,15 @@
 			path = ObjectCaptureViews;
 			sourceTree = "<group>";
 		};
-		F15AF8942AFA48DF00C6126A /* Models */ = {
+		F15AF8962AFA4D2300C6126A /* ObjectCapture */ = {
+			isa = PBXGroup;
+			children = (
+				F15AF8972AFA4D3100C6126A /* Models */,
+			);
+			path = ObjectCapture;
+			sourceTree = "<group>";
+		};
+		F15AF8972AFA4D3100C6126A /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -186,11 +183,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				F15AF8932AFA406600C6126A /* OCMainView.swift in Sources */,
-=======
 				EA57DF7D2AFA402700BA8E8A /* MainViewController.swift in Sources */,
->>>>>>> 8a57ba075aa67cb57132f739767f9419b079c1ce
 				F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */,
 				F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */,
 			);
@@ -326,11 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 6U83SJP3X2;
-=======
-				DEVELOPMENT_TEAM = 42GM3S2U7Q;
->>>>>>> 8a57ba075aa67cb57132f739767f9419b079c1ce
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";
@@ -360,11 +350,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
-<<<<<<< HEAD
 				DEVELOPMENT_TEAM = 6U83SJP3X2;
-=======
-				DEVELOPMENT_TEAM = 42GM3S2U7Q;
->>>>>>> 8a57ba075aa67cb57132f739767f9419b079c1ce
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";
