@@ -11,6 +11,7 @@
 		F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF8812AFA3EAD00C6126A /* ContentView.swift */; };
 		F15AF8842AFA3EAF00C6126A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15AF8832AFA3EAF00C6126A /* Assets.xcassets */; };
 		F15AF8872AFA3EAF00C6126A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15AF8862AFA3EAF00C6126A /* Preview Assets.xcassets */; };
+		F15AF8932AFA406600C6126A /* OCMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF8922AFA406600C6126A /* OCMainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		F15AF8812AFA3EAD00C6126A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F15AF8832AFA3EAF00C6126A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F15AF8862AFA3EAF00C6126A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F15AF8922AFA406600C6126A /* OCMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCMainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +53,9 @@
 		F15AF87E2AFA3EAD00C6126A /* BestAppEver */ = {
 			isa = PBXGroup;
 			children = (
+				F15AF8902AFA3FA900C6126A /* Views */,
+				F15AF88F2AFA3F9400C6126A /* ObjectCapture */,
 				F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */,
-				F15AF8812AFA3EAD00C6126A /* ContentView.swift */,
 				F15AF8832AFA3EAF00C6126A /* Assets.xcassets */,
 				F15AF8852AFA3EAF00C6126A /* Preview Content */,
 			);
@@ -65,6 +68,30 @@
 				F15AF8862AFA3EAF00C6126A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F15AF88F2AFA3F9400C6126A /* ObjectCapture */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ObjectCapture;
+			sourceTree = "<group>";
+		};
+		F15AF8902AFA3FA900C6126A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F15AF8912AFA3FBF00C6126A /* ObjectCaptureViews */,
+				F15AF8812AFA3EAD00C6126A /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F15AF8912AFA3FBF00C6126A /* ObjectCaptureViews */ = {
+			isa = PBXGroup;
+			children = (
+				F15AF8922AFA406600C6126A /* OCMainView.swift */,
+			);
+			path = ObjectCaptureViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +164,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15AF8932AFA406600C6126A /* OCMainView.swift in Sources */,
 				F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */,
 				F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */,
 			);
@@ -272,6 +300,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
+				DEVELOPMENT_TEAM = 6U83SJP3X2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
+				DEVELOPMENT_TEAM = 6U83SJP3X2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
