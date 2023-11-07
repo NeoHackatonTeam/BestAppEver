@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA57DF7D2AFA402700BA8E8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF7C2AFA402700BA8E8A /* MainViewController.swift */; };
+		EA57DF802AFA5BA900BA8E8A /* LibrairyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF7F2AFA5BA900BA8E8A /* LibrairyView.swift */; };
+		EA57DF822AFA5C5600BA8E8A /* LibrairyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF812AFA5C5600BA8E8A /* LibrairyViewModel.swift */; };
+		EA57DF842AFA5FAF00BA8E8A /* FBDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF832AFA5FAF00BA8E8A /* FBDataModel.swift */; };
+		EA57DF862AFA652E00BA8E8A /* LibrairyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF852AFA652E00BA8E8A /* LibrairyCell.swift */; };
 		F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */; };
 		F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF8812AFA3EAD00C6126A /* ContentView.swift */; };
 		F15AF8842AFA3EAF00C6126A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15AF8832AFA3EAF00C6126A /* Assets.xcassets */; };
@@ -43,7 +46,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA57DF7C2AFA402700BA8E8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EA57DF7F2AFA5BA900BA8E8A /* LibrairyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyView.swift; sourceTree = "<group>"; };
+		EA57DF812AFA5C5600BA8E8A /* LibrairyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyViewModel.swift; sourceTree = "<group>"; };
+		EA57DF832AFA5FAF00BA8E8A /* FBDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBDataModel.swift; sourceTree = "<group>"; };
+		EA57DF852AFA652E00BA8E8A /* LibrairyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyCell.swift; sourceTree = "<group>"; };
 		F15AF87C2AFA3EAD00C6126A /* BestAppEver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestAppEver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestAppEverApp.swift; sourceTree = "<group>"; };
 		F15AF8812AFA3EAD00C6126A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -103,9 +109,18 @@
 		EA57DF7B2AFA401100BA8E8A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA57DF7C2AFA402700BA8E8A /* MainViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EA57DF7E2AFA5B7900BA8E8A /* LibrairyView */ = {
+			isa = PBXGroup;
+			children = (
+				EA57DF7F2AFA5BA900BA8E8A /* LibrairyView.swift */,
+				EA57DF812AFA5C5600BA8E8A /* LibrairyViewModel.swift */,
+				EA57DF852AFA652E00BA8E8A /* LibrairyCell.swift */,
+			);
+			path = LibrairyView;
 			sourceTree = "<group>";
 		};
 		F15AF8732AFA3EAD00C6126A = {
@@ -153,6 +168,7 @@
 				F15AF8C72AFA623F00C6126A /* Onboardings */,
 				F15AF8B32AFA60D600C6126A /* Others */,
 				F15AF8AC2AFA604F00C6126A /* Overlays */,
+				EA57DF7E2AFA5B7900BA8E8A /* LibrairyView */,
 				F15AF8912AFA3FBF00C6126A /* ObjectCaptureViews */,
 				F15AF8812AFA3EAD00C6126A /* ContentView.swift */,
 			);
@@ -184,6 +200,8 @@
 				F15AF8CA2AFA627D00C6126A /* OnboardingState */,
 				F15AF8A02AFA5CC700C6126A /* CaptureFolder */,
 				F15AF89F2AFA5CBB00C6126A /* AppData */,
+				F15AF8982AFA4DB700C6126A /* AppDataModel.swift */,
+				EA57DF832AFA5FAF00BA8E8A /* FBDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -387,6 +405,13 @@
 				F15AF8A62AFA5EA800C6126A /* CaptureView.swift in Sources */,
 				F15AF8B22AFA606700C6126A /* CaptureOverlayView+LocalizedString.swift in Sources */,
 				F15AF8D22AFA636700C6126A /* OnboardingButtonView.swift in Sources */,
+				F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */,
+				EA57DF822AFA5C5600BA8E8A /* LibrairyViewModel.swift in Sources */,
+				EA57DF862AFA652E00BA8E8A /* LibrairyCell.swift in Sources */,
+				F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */,
+				EA57DF802AFA5BA900BA8E8A /* LibrairyView.swift in Sources */,
+				F15AF8992AFA4DB700C6126A /* AppDataModel.swift in Sources */,
+				EA57DF842AFA5FAF00BA8E8A /* FBDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,10 +542,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
-				DEVELOPMENT_TEAM = 6U83SJP3X2;
+				DEVELOPMENT_TEAM = 42GM3S2U7Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";
@@ -536,6 +562,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = be.HackDamon.BestAppEver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -547,10 +574,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
-				DEVELOPMENT_TEAM = 6U83SJP3X2;
+				DEVELOPMENT_TEAM = 42GM3S2U7Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";
@@ -566,6 +594,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = be.HackDamon.BestAppEver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
