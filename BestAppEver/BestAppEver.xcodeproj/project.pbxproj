@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA57DF7D2AFA402700BA8E8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF7C2AFA402700BA8E8A /* MainViewController.swift */; };
 		F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */; };
 		F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF8812AFA3EAD00C6126A /* ContentView.swift */; };
 		F15AF8842AFA3EAF00C6126A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15AF8832AFA3EAF00C6126A /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA57DF7C2AFA402700BA8E8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F15AF87C2AFA3EAD00C6126A /* BestAppEver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestAppEver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestAppEverApp.swift; sourceTree = "<group>"; };
 		F15AF8812AFA3EAD00C6126A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +34,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA57DF7B2AFA401100BA8E8A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EA57DF7C2AFA402700BA8E8A /* MainViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		F15AF8732AFA3EAD00C6126A = {
 			isa = PBXGroup;
 			children = (
@@ -51,6 +61,7 @@
 		F15AF87E2AFA3EAD00C6126A /* BestAppEver */ = {
 			isa = PBXGroup;
 			children = (
+				EA57DF7B2AFA401100BA8E8A /* ViewController */,
 				F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */,
 				F15AF8812AFA3EAD00C6126A /* ContentView.swift */,
 				F15AF8832AFA3EAF00C6126A /* Assets.xcassets */,
@@ -137,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA57DF7D2AFA402700BA8E8A /* MainViewController.swift in Sources */,
 				F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */,
 				F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */,
 			);
@@ -272,6 +284,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
+				DEVELOPMENT_TEAM = 42GM3S2U7Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
+				DEVELOPMENT_TEAM = 42GM3S2U7Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
