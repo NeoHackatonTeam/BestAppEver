@@ -9,30 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationView{
-            VStack{
-                Text("App Name")
-                Spacer()
-                NavigationLink{
-                    OCMainView()
-                } label: {
-                    Text("Click Here to Start modeling!")
-                }
-                .padding(15)
-                .background(Color.yellow)
-                .clipShape(Capsule())
-                
-                NavigationLink{
-                    LibrairyView()
-                } label: {
-                    Text("Acces to Librairy")
-                }
-                .padding(15)
-                .background(Color.yellow)
-                .clipShape(Capsule())
-                Spacer()
-            }
+        
+        TabView{
             
+            Group{
+                
+                LibrairyView()
+                    .tabItem {
+                        Image(systemName: "list.bullet")
+                           
+                    }
+                
+                OCMainView()
+                    .tabItem {
+                        Image(systemName: "camera")
+                    }
+
+            }
+            .toolbarBackground(.black, for: .tabBar)
+            .toolbarBackground(.visible, for: .tabBar)
+            .toolbarColorScheme(.dark, for: .tabBar)
             
         }
     }
