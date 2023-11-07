@@ -14,6 +14,9 @@ import SwiftUI
 ///
 /// The duration extends if the queue refreshes and automatically removes items for which the timer is expired.
 class TimedMessageList: ObservableObject {
+    /// The list's next message in its queue.
+    @Published var activeMessage: Message? = nil
+    
     /// A unique container for a message string and timestamps.
     ///
     /// SwiftUI can consistently animate each `Message` instance because the
@@ -24,13 +27,10 @@ class TimedMessageList: ObservableObject {
     struct Message: Identifiable {
         /// A stable identifier which ensures that animations work properly.
         let id = UUID()
-
         /// The text of the message.
         let message: String
-
         /// The message's creation date.
         let startTime = Date()
-
         /// The message's expiration date.
         ///
         /// The property is `private` so the app can maintain a single timer state.
@@ -40,7 +40,6 @@ class TimedMessageList: ObservableObject {
         init(_ string: String) {
             message = string
         }
-
         /// Returns a Boolean that indicates whether the message's expiration
         /// date is in the past.
         func hasExpired() -> Bool {
@@ -50,10 +49,6 @@ class TimedMessageList: ObservableObject {
             return Date() >= endTime
         }
     }
-
-    /// The list's next message in its queue.
-    @Published var activeMessage: Message? = nil
-
     /// An ordered list of the messages in the list.
     private var messages = [Message]() {
         didSet {

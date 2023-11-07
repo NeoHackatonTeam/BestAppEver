@@ -56,7 +56,7 @@
 		F15AF8832AFA3EAF00C6126A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F15AF8862AFA3EAF00C6126A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F15AF8922AFA406600C6126A /* OCMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCMainView.swift; sourceTree = "<group>"; };
-		F15AF8982AFA4DB700C6126A /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataModel.swift; sourceTree = "<group>"; };
+		F15AF8982AFA4DB700C6126A /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDataModel.swift; path = BestAppEver/ObjectCapture/Models/AppDataModel.swift; sourceTree = SOURCE_ROOT; };
 		F15AF89A2AFA5C2700C6126A /* AppDataModel+Orbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDataModel+Orbit.swift"; sourceTree = "<group>"; };
 		F15AF89C2AFA5C5500C6126A /* AppDataModel+State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDataModel+State.swift"; sourceTree = "<group>"; };
 		F15AF8A12AFA5CD500C6126A /* CaptureFolderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureFolderManager.swift; sourceTree = "<group>"; };
@@ -106,13 +106,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EA57DF7B2AFA401100BA8E8A /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
 		EA57DF7E2AFA5B7900BA8E8A /* LibrairyView */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +138,6 @@
 				F15AF8B82AFA612200C6126A /* Ressources */,
 				F15AF8962AFA4D2300C6126A /* ObjectCapture */,
 				F15AF8902AFA3FA900C6126A /* Views */,
-				EA57DF7B2AFA401100BA8E8A /* ViewController */,
 				F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */,
 				F15AF8832AFA3EAF00C6126A /* Assets.xcassets */,
 				F15AF8852AFA3EAF00C6126A /* Preview Content */,
@@ -200,7 +192,6 @@
 				F15AF8CA2AFA627D00C6126A /* OnboardingState */,
 				F15AF8A02AFA5CC700C6126A /* CaptureFolder */,
 				F15AF89F2AFA5CBB00C6126A /* AppData */,
-				F15AF8982AFA4DB700C6126A /* AppDataModel.swift */,
 				EA57DF832AFA5FAF00BA8E8A /* FBDataModel.swift */,
 			);
 			path = Models;
@@ -388,7 +379,6 @@
 				F15AF8B02AFA606200C6126A /* CaptureOverlayView+Buttons.swift in Sources */,
 				F15AF8D42AFA638C00C6126A /* OnboardingButtonView+LocalizedString.swift in Sources */,
 				F15AF8DD2AFA657300C6126A /* ModelView.swift in Sources */,
-				EA57DF7D2AFA402700BA8E8A /* MainViewController.swift in Sources */,
 				F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */,
 				F15AF8D92AFA651500C6126A /* ProgressBarView.swift in Sources */,
 				F15AF8CC2AFA628B00C6126A /* OnboardingStateMachine.swift in Sources */,

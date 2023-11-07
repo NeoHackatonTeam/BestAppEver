@@ -197,9 +197,15 @@ class CaptureFolderManager: ObservableObject {
         
         let scanFolder = documentsFolder.appendingPathComponent("Scans/", isDirectory: true)
         
+        /*
         print(try! FileManager.default.contentsOfDirectory(at: scanFolder, includingPropertiesForKeys: nil)
-            .map { try! FileManager.default.contentsOfDirectory(at: URL(string: "\($0)/Images")!, includingPropertiesForKeys: nil) })
+            .map { try! FileManager.default.contentsOfDirectory(at: URL(string: "\($0)/Images")!, includingPropertiesForKeys: nil) }) 
+         */
+        print(try! FileManager.default.contentsOfDirectory(at: scanFolder, includingPropertiesForKeys: nil)
+            .map { try! FileManager.default.contentsOfDirectory(at: URL(string: "\($0)/Models")!, includingPropertiesForKeys: nil) })
         
         return scanFolder
     }
+    
+    
 }
