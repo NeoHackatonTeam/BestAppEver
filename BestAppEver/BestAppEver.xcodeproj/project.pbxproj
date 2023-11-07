@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA57DF802AFA5BA900BA8E8A /* LibrairyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF7F2AFA5BA900BA8E8A /* LibrairyView.swift */; };
+		EA57DF822AFA5C5600BA8E8A /* LibrairyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF812AFA5C5600BA8E8A /* LibrairyViewModel.swift */; };
+		EA57DF842AFA5FAF00BA8E8A /* FBDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF832AFA5FAF00BA8E8A /* FBDataModel.swift */; };
+		EA57DF862AFA652E00BA8E8A /* LibrairyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF852AFA652E00BA8E8A /* LibrairyCell.swift */; };
+		EA57DF882AFA6E8900BA8E8A /* LibrairyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF872AFA6E8900BA8E8A /* LibrairyDetailView.swift */; };
 		F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */; };
 		F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF8812AFA3EAD00C6126A /* ContentView.swift */; };
 		F15AF8842AFA3EAF00C6126A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15AF8832AFA3EAF00C6126A /* Assets.xcassets */; };
@@ -17,9 +22,16 @@
 		F4CD1B292AFA422C000217BD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F4CD1B282AFA422C000217BD /* FirebaseFirestoreSwift */; };
 		F4CD1B3C2AFA4D4A000217BD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F4CD1B3B2AFA4D4A000217BD /* FirebaseStorage */; };
 		F4CD1B3E2AFA4F5F000217BD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4CD1B3D2AFA4F5F000217BD /* GoogleService-Info.plist */; };
+		F15AF8932AFA406600C6126A /* OCMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF8922AFA406600C6126A /* OCMainView.swift */; };
+		F15AF8992AFA4DB700C6126A /* AppDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF8982AFA4DB700C6126A /* AppDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA57DF7F2AFA5BA900BA8E8A /* LibrairyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyView.swift; sourceTree = "<group>"; };
+		EA57DF812AFA5C5600BA8E8A /* LibrairyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyViewModel.swift; sourceTree = "<group>"; };
+		EA57DF832AFA5FAF00BA8E8A /* FBDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBDataModel.swift; sourceTree = "<group>"; };
+		EA57DF852AFA652E00BA8E8A /* LibrairyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyCell.swift; sourceTree = "<group>"; };
+		EA57DF872AFA6E8900BA8E8A /* LibrairyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyDetailView.swift; sourceTree = "<group>"; };
 		F15AF87C2AFA3EAD00C6126A /* BestAppEver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestAppEver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestAppEverApp.swift; sourceTree = "<group>"; };
 		F15AF8812AFA3EAD00C6126A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +39,8 @@
 		F15AF8862AFA3EAF00C6126A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F4CD1B092AFA41CC000217BD /* reposStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = reposStorage.swift; sourceTree = "<group>"; };
 		F4CD1B3D2AFA4F5F000217BD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F15AF8922AFA406600C6126A /* OCMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCMainView.swift; sourceTree = "<group>"; };
+		F15AF8982AFA4DB700C6126A /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +58,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA57DF7B2AFA401100BA8E8A /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EA57DF7E2AFA5B7900BA8E8A /* LibrairyView */ = {
+			isa = PBXGroup;
+			children = (
+				EA57DF7F2AFA5BA900BA8E8A /* LibrairyView.swift */,
+				EA57DF812AFA5C5600BA8E8A /* LibrairyViewModel.swift */,
+				EA57DF852AFA652E00BA8E8A /* LibrairyCell.swift */,
+				EA57DF872AFA6E8900BA8E8A /* LibrairyDetailView.swift */,
+			);
+			path = LibrairyView;
+			sourceTree = "<group>";
+		};
 		F15AF8732AFA3EAD00C6126A = {
 			isa = PBXGroup;
 			children = (
@@ -66,8 +98,10 @@
 			isa = PBXGroup;
 			children = (
 				F4CD1B062AFA40C4000217BD /* FireBase */,
+				F15AF8962AFA4D2300C6126A /* ObjectCapture */,
+				F15AF8902AFA3FA900C6126A /* Views */,
+				EA57DF7B2AFA401100BA8E8A /* ViewController */,
 				F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */,
-				F15AF8812AFA3EAD00C6126A /* ContentView.swift */,
 				F15AF8832AFA3EAF00C6126A /* Assets.xcassets */,
 				F15AF8852AFA3EAF00C6126A /* Preview Content */,
 			);
@@ -111,6 +145,41 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F15AF8902AFA3FA900C6126A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA57DF7E2AFA5B7900BA8E8A /* LibrairyView */,
+				F15AF8912AFA3FBF00C6126A /* ObjectCaptureViews */,
+				F15AF8812AFA3EAD00C6126A /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		F15AF8912AFA3FBF00C6126A /* ObjectCaptureViews */ = {
+			isa = PBXGroup;
+			children = (
+				F15AF8922AFA406600C6126A /* OCMainView.swift */,
+			);
+			path = ObjectCaptureViews;
+			sourceTree = "<group>";
+		};
+		F15AF8962AFA4D2300C6126A /* ObjectCapture */ = {
+			isa = PBXGroup;
+			children = (
+				F15AF8972AFA4D3100C6126A /* Models */,
+			);
+			path = ObjectCapture;
+			sourceTree = "<group>";
+		};
+		F15AF8972AFA4D3100C6126A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F15AF8982AFA4DB700C6126A /* AppDataModel.swift */,
+				EA57DF832AFA5FAF00BA8E8A /* FBDataModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,9 +262,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F15AF8932AFA406600C6126A /* OCMainView.swift in Sources */,
 				F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */,
 				F4CD1B0A2AFA41CC000217BD /* reposStorage.swift in Sources */,
+				EA57DF822AFA5C5600BA8E8A /* LibrairyViewModel.swift in Sources */,
+				EA57DF862AFA652E00BA8E8A /* LibrairyCell.swift in Sources */,
 				F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */,
+				EA57DF802AFA5BA900BA8E8A /* LibrairyView.swift in Sources */,
+				F15AF8992AFA4DB700C6126A /* AppDataModel.swift in Sources */,
+				EA57DF842AFA5FAF00BA8E8A /* FBDataModel.swift in Sources */,
+				EA57DF882AFA6E8900BA8E8A /* LibrairyDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,11 +402,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
+				DEVELOPMENT_TEAM = 42GM3S2U7Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,8 +420,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = be.technifutur.BestAppEver;
+				PRODUCT_BUNDLE_IDENTIFIER = be.HackDamon.BestAppEver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -354,11 +434,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
+				DEVELOPMENT_TEAM = 42GM3S2U7Q;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -369,8 +452,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = be.technifutur.BestAppEver;
+				PRODUCT_BUNDLE_IDENTIFIER = be.HackDamon.BestAppEver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
