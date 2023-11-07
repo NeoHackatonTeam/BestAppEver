@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA57DF7D2AFA402700BA8E8A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF7C2AFA402700BA8E8A /* MainViewController.swift */; };
+		EA57DF802AFA5BA900BA8E8A /* LibrairyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF7F2AFA5BA900BA8E8A /* LibrairyView.swift */; };
+		EA57DF822AFA5C5600BA8E8A /* LibrairyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF812AFA5C5600BA8E8A /* LibrairyViewModel.swift */; };
+		EA57DF842AFA5FAF00BA8E8A /* FBDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF832AFA5FAF00BA8E8A /* FBDataModel.swift */; };
 		F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */; };
 		F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF8812AFA3EAD00C6126A /* ContentView.swift */; };
 		F15AF8842AFA3EAF00C6126A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F15AF8832AFA3EAF00C6126A /* Assets.xcassets */; };
@@ -17,7 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EA57DF7C2AFA402700BA8E8A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EA57DF7F2AFA5BA900BA8E8A /* LibrairyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyView.swift; sourceTree = "<group>"; };
+		EA57DF812AFA5C5600BA8E8A /* LibrairyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyViewModel.swift; sourceTree = "<group>"; };
+		EA57DF832AFA5FAF00BA8E8A /* FBDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBDataModel.swift; sourceTree = "<group>"; };
 		F15AF87C2AFA3EAD00C6126A /* BestAppEver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestAppEver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestAppEverApp.swift; sourceTree = "<group>"; };
 		F15AF8812AFA3EAD00C6126A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,9 +45,17 @@
 		EA57DF7B2AFA401100BA8E8A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EA57DF7C2AFA402700BA8E8A /* MainViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		EA57DF7E2AFA5B7900BA8E8A /* LibrairyView */ = {
+			isa = PBXGroup;
+			children = (
+				EA57DF7F2AFA5BA900BA8E8A /* LibrairyView.swift */,
+				EA57DF812AFA5C5600BA8E8A /* LibrairyViewModel.swift */,
+			);
+			path = LibrairyView;
 			sourceTree = "<group>";
 		};
 		F15AF8732AFA3EAD00C6126A = {
@@ -86,6 +98,7 @@
 		F15AF8902AFA3FA900C6126A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA57DF7E2AFA5B7900BA8E8A /* LibrairyView */,
 				F15AF8912AFA3FBF00C6126A /* ObjectCaptureViews */,
 				F15AF8812AFA3EAD00C6126A /* ContentView.swift */,
 			);
@@ -112,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				F15AF8982AFA4DB700C6126A /* AppDataModel.swift */,
+				EA57DF832AFA5FAF00BA8E8A /* FBDataModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,10 +201,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				F15AF8932AFA406600C6126A /* OCMainView.swift in Sources */,
-				EA57DF7D2AFA402700BA8E8A /* MainViewController.swift in Sources */,
 				F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */,
+				EA57DF822AFA5C5600BA8E8A /* LibrairyViewModel.swift in Sources */,
 				F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */,
+				EA57DF802AFA5BA900BA8E8A /* LibrairyView.swift in Sources */,
 				F15AF8992AFA4DB700C6126A /* AppDataModel.swift in Sources */,
+				EA57DF842AFA5FAF00BA8E8A /* FBDataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +340,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
-				DEVELOPMENT_TEAM = 6U83SJP3X2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";
@@ -354,7 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
-				DEVELOPMENT_TEAM = 6U83SJP3X2;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";

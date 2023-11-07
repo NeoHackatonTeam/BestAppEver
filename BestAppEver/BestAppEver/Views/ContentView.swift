@@ -16,6 +16,11 @@ struct ContentView: View {
                 } label: {
                     Text("Click Here to Start modeling!")
                 }
+                NavigationLink{
+                    LibrairyView()
+                } label: {
+                    Text("Librairy")
+                }
             }
         }
     }
