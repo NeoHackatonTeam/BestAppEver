@@ -540,7 +540,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
-				DEVELOPMENT_TEAM = 42GM3S2U7Q;
+				DEVELOPMENT_TEAM = 6U83SJP3X2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";
@@ -572,7 +572,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BestAppEver/Preview Content\"";
-				DEVELOPMENT_TEAM = 42GM3S2U7Q;
+				DEVELOPMENT_TEAM = 6U83SJP3X2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Hackaton need camera";
