@@ -87,10 +87,34 @@ struct ContentView: View {
 
             Button("Sélectionner une image") {
                 selectedImage = nil
-            }
-            .padding()
+            }.padding()
 
             ImagePicker(selectedImage: $selectedImage)
+            
+            Button(action: {
+                
+                let reposStorage: ReposStorage = ReposStorage()
+                reposStorage.listFiles() { (images, error) in
+                    if let error = error {
+                        print("Erreur lors de l'envoi de l'image : \(error.localizedDescription)")
+                    } else {
+                        print("Image envoyée avec succès")
+                    }
+                    
+                    if let images = images {
+                      //
+                    } else {
+                        //
+                    }
+                }
+                
+            }) {
+                Text("Lister les images")
+                    .padding()
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
         }
     }
 }

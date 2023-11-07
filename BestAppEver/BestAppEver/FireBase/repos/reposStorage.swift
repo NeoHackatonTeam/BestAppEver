@@ -35,4 +35,23 @@ class ReposStorage {
             }
         }
     }
+    
+    
+    func listFiles(completion: @escaping ([String]?, Error?) -> Void) {
+        let storageRef = storage.reference(forURL: "gs://bestappever-eee4a.appspot.com").child("object3d/uid")
+        
+        storageRef.listAll { (result, error) in
+            if let error = error {}
+            for prefix in result!.prefixes {
+                print(prefix)
+            }
+            
+            /*
+            for item in result!.items {
+                // The items under storageReference.
+            }
+            */
+            
+        }
+    }
 }
