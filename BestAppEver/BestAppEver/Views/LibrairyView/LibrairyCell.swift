@@ -11,9 +11,7 @@ struct LibrairyCell: View {
     let model :FBDataModel
     
     var body: some View {
-        VStack{
-            Text(model.name)
-                .font(.title)
+        HStack{
             AsyncImage(url: URL(string: model.url)){ img in
                 img
                     .resizable()
@@ -24,9 +22,17 @@ struct LibrairyCell: View {
                     .resizable()
                     .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 100)
             }
-            Text(model.description)
-                .font(.footnote)
-                .lineLimit(1)
+            VStack{
+                Text(model.name)
+                    .font(.title)
+                Text(model.description)
+                    .font(.footnote)
+                    .lineLimit(5)
+                Spacer()
+            }
+            .foregroundColor(.black)
+
+            Spacer()
         }
     }
 }

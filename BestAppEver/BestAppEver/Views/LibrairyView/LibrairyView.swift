@@ -11,22 +11,19 @@ struct LibrairyView: View {
     
     @StateObject var viewModel = LibrairyViewModel()
 
-    var columns: [GridItem] = [
-        GridItem(.adaptive(minimum: 100)),
-        GridItem(.adaptive(minimum: 100))
-    ]
-
-    
     var body: some View {
-        NavigationStack{
+        NavigationView{
             ScrollView{
-                LazyVGrid(columns: columns,
-                          alignment: .leading){
+                VStack{
                     ForEach(viewModel.listModel){ model in
-                        LibrairyCell(model: model)
+                        NavigationLink(destination: LibrairyDetailView()){
+                            LibrairyCell(model: model)
+                        }
+                        
                     }
                 }
-            }.background(Color.yellow)
+            }
+            .searchable(text: $viewModel.searchText, prompt: "Look for a model")
         }
         }
 }

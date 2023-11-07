@@ -6,16 +6,23 @@
 //
 
 import Foundation
+import Combine
 
 class LibrairyViewModel: ObservableObject{
     
     @Published var listModel = [FBDataModel]()
+    @Published var searchText: String = ""
+    private var cancellable: AnyCancellable?
     
     init(){
-        for cpt in (0...4){
+        /*for cpt in (0...4){
             listModel.append(FBDataModel(id: cpt, url: "https://i.pinimg.com/736x/5e/8d/fc/5e8dfc7210d98ff44bd04a2804875562.jpg", name: "Name", description: "Description"))
-        }
+        }*/
         
+        cancellable = $searchText
+            .sink { [weak self] search in
+                self?.refreshList()
+            }
         
         /*listModel = [
             FBDataModel(id: 0, url: ""),
@@ -24,6 +31,19 @@ class LibrairyViewModel: ObservableObject{
             FBDataModel(id: 3, url: "https://img.freepik.com/photos-gratuite/fille-fleur-tete_1340-30886.jpg?w=740&t=st=1699358289~exp=1699358889~hmac=cd7417cf73e6ef00e4f23403b32a43862777b0fdb3be9aa8b36e606cd1c48082"),
             FBDataModel(id: 4, url: "https://img.freepik.com/photos-gratuite/fille-aux-cheveux-noirs-chemise-blanche-jupe-noire-jupe-noire_1340-27763.jpg?w=740&t=st=1699358312~exp=1699358912~hmac=b1c257f2a2d36b28e990571e75a0fb0701afd4e2158f83d4d1d136f5c69de5dc"),
         ]*/
+    }
+    
+    func refreshList(){
+        if(searchText.count <= 3 ){
+            //TODO: implementer la recherche de Model dans FireBase
+            for cpt in (0...4){
+                listModel.append(FBDataModel(id: cpt, url: "https://i.pinimg.com/736x/5e/8d/fc/5e8dfc7210d98ff44bd04a2804875562.jpg", name: "Name", description: "Description"))
+            }
+        }else{
+            listModel = listModel.filter{ item in
+                item.name.contains(searchText)
+            }
+        }
     }
     
 }
