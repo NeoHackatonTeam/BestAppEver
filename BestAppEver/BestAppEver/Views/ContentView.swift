@@ -38,8 +38,8 @@ struct ImagePicker: UIViewControllerRepresentable {
                     do {
                         try data.write(to: localURL)
                         print(localURL)
-                        let reposStorage: ReposStorage = ReposStorage()
-                        reposStorage.saveFile(localURL: localURL, typeFile: FileType.image) { (fileName, error) in
+                        
+                        ReposStorage.instance.saveFile(localURL: localURL, typeFile: FileType.image) { (fileName, error) in
                             if let error = error {
                                 print("Erreur lors de l'envoi de l'image : \(error.localizedDescription)")
                             } else {
@@ -125,8 +125,7 @@ struct ContentView: View {
             
             Button(action: {
                 
-                let reposStorage: ReposStorage = ReposStorage()
-                reposStorage.loadFile(typeFile: FileType.image, nameFile: "9B370804-EE40-49A6-921A-E7E51BBD6A51_image.jpg") {
+                ReposStorage.instance.loadFile(typeFile: FileType.image, nameFile: "9B370804-EE40-49A6-921A-E7E51BBD6A51_image.jpg") {
                     localPath, error in
                     if let error = error {
                         print("Erreur lors du téléchargement du fichier : \(error)")

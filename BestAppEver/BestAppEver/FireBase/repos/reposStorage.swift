@@ -20,11 +20,12 @@ extension FileType {
     }
 }
 
-
 class ReposStorage {
-    let storage = Storage.storage()
-    let urlStorage : String = "gs://bestappever-47608.appspot.com"
+    static let instance = ReposStorage()
+    private init() {}
     
+    let storage = Storage.storage()
+    let urlStorage: String = "gs://bestappever-47608.appspot.com"
     
     func saveFile(localURL: URL, typeFile: FileType, completion: @escaping (String?, Error?) -> Void) {
         let storageRef = storage.reference(forURL: urlStorage)
@@ -50,19 +51,24 @@ class ReposStorage {
         }
     }
 
-    func loadFile(typeFile: FileType, nameFile: String, completion: @escaping (String?, Error?) -> Void) {
+    func loadFile(typeFile: FileType, nameFile: String, completion: @escaping (URL?, Error?) -> Void) {
         let storageRef = storage.reference(forURL: urlStorage)
         let islandRef = storageRef.child(typeFile.toString() + "/" + nameFile)
 
         let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         let localURL = documentsDirectory.appendingPathComponent(nameFile)
-        
-        let downloadTask = islandRef.write(toFile: localURL) { 
-            url, error in
-            if let error = error {
-                completion(nil, error)
-            } else {
-                completion(localURL.path, nil)
+
+        if FileManager.default.fileExists(atPath: localURL.path) {
+            completion(localURL, nil)
+        } else {
+            // Le fichier n'existe pas localement, on peut le télécharger
+            let downloadTask = islandRef.write(toFile: localURL) {
+                url, error in
+                if let error = error {
+                    completion(nil, error)
+                } else {
+                    completion(localURL, nil)
+                }
             }
         }
     }
