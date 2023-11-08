@@ -13,12 +13,12 @@ class AiViewModel{
     
     let api_key = "7FCADDCD-EA27-409C-98B8-CF37895530370A00049C-B9AE-4DD8-8803-19151FD3E7EF"
     
-    func startConnect(){
+    func askToAi(item: FBDataModel, action: (FBDataModel) -> Void){
         
         let jsonData = [
             "tkn": api_key,
             "modelVersion": "2.1_full",
-            "input": "https://img.freepik.com/photos-gratuite/fille-dans-ciel_1340-27755.jpg?w=740&t=st=1699358253~exp=1699358853~hmac=e0abb0ad93c70190ccacf8748055fa7c478fef55735e23a528604de37b8c3501",
+            "input": item.urlImage,
             "visionParams": "describe_all",
             "gpt_prompt": "",
             "gpt_length": "125"
@@ -42,7 +42,8 @@ class AiViewModel{
             } else if let data = data {
                 
                 let product = try? JSONDecoder().decode(AiModel.self, from: data)
-                print(product?.caption.text ?? "Mode Free Over")
+                item.description = product?.caption.text ?? "Mode free is Over"
+                action(item)
                 
             }
         }

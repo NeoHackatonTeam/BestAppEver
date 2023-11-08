@@ -14,7 +14,7 @@ struct DatabaseView: View {
     var body: some View {
         VStack{
             Button(action: {
-                viewModel.addToDatabase(
+                viewModel.startEncode(
                     FBDataModel(
                         urlImage: "Labas",
                         urlModele: "IciBas",

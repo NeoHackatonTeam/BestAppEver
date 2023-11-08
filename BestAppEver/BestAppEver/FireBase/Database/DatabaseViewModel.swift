@@ -13,15 +13,24 @@ import FirebaseFirestore
 class DatabaseViewModel{
     
     let db: Firestore
+    let aiPrompt: AiViewModel
     let namespaceCollection = "objects"
     
     
     init(){
         db = Firestore.firestore()
+        aiPrompt = AiViewModel()
     }
     
-    func addToDatabase(_ item: FBDataModel){
-        
+    
+    func startEncode(_ item: FBDataModel){
+        //TODO: Utiliser la réponse de l'IA pour remplir la description
+        aiPrompt.askToAi(item: item){item in
+            addToDatabase(item)
+        }
+    }
+    
+    private func addToDatabase(_ item: FBDataModel){
         var ref: DocumentReference? = nil
         ref = db.collection(namespaceCollection).addDocument(data: [
             "name": item.name,

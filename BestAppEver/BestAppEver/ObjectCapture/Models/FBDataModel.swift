@@ -9,8 +9,8 @@ import Foundation
 
 struct FBDataModel: Identifiable{
     var id: String = ""
-    let urlImage: String
-    let urlModele: String
-    let name: String
-    let description: String
+    var urlImage: String
+    var urlModele: String
+    var name: String
+    var description: String
 }
