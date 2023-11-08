@@ -37,7 +37,11 @@ class LibrairyViewModel: ObservableObject{
         if(searchText.count <= 3 ){
             //TODO: implementer la recherche de Model dans FireBase
             for cpt in (0...4){
-                listModel.append(FBDataModel(id: cpt, url: "https://i.pinimg.com/736x/5e/8d/fc/5e8dfc7210d98ff44bd04a2804875562.jpg", name: "Name", description: "Description"))
+                listModel.append(FBDataModel(
+                    urlImage: "https://i.pinimg.com/736x/5e/8d/fc/5e8dfc7210d98ff44bd04a2804875562.jpg",
+                    urlModele: "https://i.pinimg.com/736x/5e/8d/fc/5e8dfc7210d98ff44bd04a2804875562.jpg",
+                    name: "Name",
+                    description: "Description"))
             }
         }else{
             listModel = listModel.filter{ item in

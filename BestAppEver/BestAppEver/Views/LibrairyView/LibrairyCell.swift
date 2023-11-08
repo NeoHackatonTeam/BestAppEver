@@ -12,7 +12,7 @@ struct LibrairyCell: View {
     
     var body: some View {
         HStack{
-            AsyncImage(url: URL(string: model.url)){ img in
+            AsyncImage(url: URL(string: model.urlImage)){ img in
                 img
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -39,6 +39,9 @@ struct LibrairyCell: View {
 
 #Preview {
     LibrairyCell(
-        model: FBDataModel(id: 0, url: "https://i.pinimg.com/736x/5e/8d/fc/5e8dfc7210d98ff44bd04a2804875562.jpg", name: "Name", description: "Description")
+        model: FBDataModel(
+                           urlImage: "https://i.pinimg.com/736x/5e/8d/fc/5e8dfc7210d98ff44bd04a2804875562.jpg",
+                           urlModele: "https://i.pinimg.com/736x/5e/8d/fc/5e8dfc7210d98ff44bd04a2804875562.jpg"
+                           , name: "Name", description: "Description")
     )
 }
