@@ -6,26 +6,29 @@
 //
 
 import SwiftUI
+import ARKit
 
 struct LibrairyView: View {
-    
-    @StateObject var viewModel = LibrairyViewModel()
+    @EnvironmentObject var data :AppDataModel
 
     var body: some View {
         NavigationView{
             ScrollView{
                 VStack{
-                    ForEach(viewModel.listModel){ model in
-                        NavigationLink(destination: LibrairyDetailView()){
+                    ForEach(data.modelsList){ model in
+                        NavigationLink{
+                            if let folderManager = data.scanFolderManager {
+                                ModelView(modelFile: model.localModelURL!){}
+                            }
+                        } label: {
                             LibrairyCell(model: model)
                         }
                         
                     }
                 }
             }
-            .searchable(text: $viewModel.searchText, prompt: "Look for a model")
         }
-        }
+    }
 }
 
 #Preview {

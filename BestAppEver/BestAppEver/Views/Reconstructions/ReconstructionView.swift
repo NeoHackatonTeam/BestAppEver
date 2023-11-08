@@ -14,15 +14,40 @@ import os
 struct ReconstructionPrimaryView: View {
     @EnvironmentObject var data: AppDataModel
     let outputFile: URL
+    let images: URL
 
     @State private var completed: Bool = false
     @State private var cancelled: Bool = false
+    @State private var saving: Bool = false
+    @State private var savedName :String = ""
 
     var body: some View {
         if completed && !cancelled {
-            ModelView(modelFile: outputFile, endCaptureCallback: { [weak data] in
-                data?.endCapture()
-            })
+            if !saving{
+                VStack(alignment: .center){
+                    Text("Do you want to save your model?")
+                        .padding(8)
+                    TextField("Name", text: $savedName)
+                        .padding(8)
+                    Button{
+                        withAnimation{
+                            saving = true
+                            if let file = try! FileManager.default.contentsOfDirectory(at: images, includingPropertiesForKeys: nil).first {
+                                data.addNewModel(image: file,
+                                                 model: outputFile,
+                                                 name: savedName)
+                            }
+                        }
+                    } label: {
+                        Text("Save")
+                            .border(.cyan)
+                    }
+                }
+            }else{
+                ModelView(modelFile: outputFile, endCaptureCallback: { [weak data] in
+                    data?.endCapture()
+                })
+            }
         } else {
             ReconstructionProgressView(outputFile: outputFile,
                                        completed: $completed,

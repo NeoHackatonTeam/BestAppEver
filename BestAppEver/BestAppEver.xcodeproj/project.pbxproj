@@ -58,7 +58,7 @@
 		F15AF8832AFA3EAF00C6126A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F15AF8862AFA3EAF00C6126A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		F15AF8922AFA406600C6126A /* OCMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCMainView.swift; sourceTree = "<group>"; };
-		F15AF8982AFA4DB700C6126A /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDataModel.swift; path = BestAppEver/ObjectCapture/Models/AppDataModel.swift; sourceTree = SOURCE_ROOT; };
+		F15AF8982AFA4DB700C6126A /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDataModel.swift; path = BestAppEver/ObjectCapture/Models/AppData/AppDataModel.swift; sourceTree = SOURCE_ROOT; };
 		F15AF89A2AFA5C2700C6126A /* AppDataModel+Orbit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDataModel+Orbit.swift"; sourceTree = "<group>"; };
 		F15AF89C2AFA5C5500C6126A /* AppDataModel+State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDataModel+State.swift"; sourceTree = "<group>"; };
 		F15AF8A12AFA5CD500C6126A /* CaptureFolderManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaptureFolderManager.swift; sourceTree = "<group>"; };

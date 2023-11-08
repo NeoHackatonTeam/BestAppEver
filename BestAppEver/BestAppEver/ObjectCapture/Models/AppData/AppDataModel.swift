@@ -13,6 +13,8 @@ import os
 @MainActor
 @available(iOS 17.0, *)
 class AppDataModel: ObservableObject, Identifiable {
+    @Published var modelsList = [FBDataModel]()
+    
     static let instance = AppDataModel()
     static let minNumImages = 10
     static let bundleForLocalizedStrings = { return Bundle.main }()
@@ -30,7 +32,15 @@ class AppDataModel: ObservableObject, Identifiable {
         }
     }
     
-
+    func addNewModel(image: URL, model: URL, name: String){
+        var newModel = FBDataModel(id: "\(modelsList.count + 1)",
+                                   url: image,
+                                   modelURL: model,
+                                   localeModelURL: model,
+                                   name: name,
+                                   description: "Description")
+        modelsList.append(newModel)
+    }
     /// The object that manages the reconstruction process of a set of images of an object into a 3D model.
     ///
     /// When the ``ReconstructionPrimaryView`` is active, hold the session here.

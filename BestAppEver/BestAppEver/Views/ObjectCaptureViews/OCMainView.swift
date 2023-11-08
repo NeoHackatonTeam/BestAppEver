@@ -15,6 +15,8 @@ struct OCMainView: View {
     @EnvironmentObject var data :AppDataModel
     @State private var showReconstructionView: Bool = false
     @State private var showErrorAlert: Bool = false
+    @State private var isComplete: Bool = false
+    @State private var isShown = false
     
     private var showProgressView: Bool {
         data.state == .completed || data.state == .restart || data.state == .ready
@@ -22,13 +24,21 @@ struct OCMainView: View {
 
     var body: some View {
         VStack {
-            if data.state == .capturing {
-                if let session = data.objectCaptureSession {
-                    CaptureView(session: session)
+            if isShown{
+                if data.state == .capturing {
+                    if let session = data.objectCaptureSession {
+                        CaptureView(session: session)
+                    }
+                } else if showProgressView {
+                    CircularProgressView()
                 }
-            } else if showProgressView {
-                CircularProgressView()
             }
+        }
+        .onAppear{
+            isShown = true
+        }
+        .onDisappear{
+            isShown = false
         }
         .onChange(of: data.state) { _, newState in
             if newState == .failed {
@@ -36,12 +46,13 @@ struct OCMainView: View {
                 showReconstructionView = false
             } else {
                 showErrorAlert = false
+                isComplete = newState == .completed
                 showReconstructionView = newState == .reconstructing || newState == .viewing
             }
         }
         .sheet(isPresented: $showReconstructionView) {
             if let folderManager = data.scanFolderManager {
-                ReconstructionPrimaryView(outputFile: folderManager.modelsFolder.appendingPathComponent("model-mobile.usdz"))
+                ReconstructionPrimaryView(outputFile: folderManager.modelsFolder.appendingPathComponent("model-mobile.usdz"), images: folderManager.imagesFolder)
             }
         }
         .alert(

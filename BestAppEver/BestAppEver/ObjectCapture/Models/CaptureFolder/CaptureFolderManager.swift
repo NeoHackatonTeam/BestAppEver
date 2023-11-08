@@ -197,15 +197,26 @@ class CaptureFolderManager: ObservableObject {
         
         let scanFolder = documentsFolder.appendingPathComponent("Scans/", isDirectory: true)
         
-        /*
         print(try! FileManager.default.contentsOfDirectory(at: scanFolder, includingPropertiesForKeys: nil)
-            .map { try! FileManager.default.contentsOfDirectory(at: URL(string: "\($0)/Images")!, includingPropertiesForKeys: nil) }) 
-         */
+            .map { try! FileManager.default.contentsOfDirectory(at: URL(string: "\($0)/Images")!, includingPropertiesForKeys: nil) }
+            .filter{!$0.isEmpty})
         print(try! FileManager.default.contentsOfDirectory(at: scanFolder, includingPropertiesForKeys: nil)
-            .map { try! FileManager.default.contentsOfDirectory(at: URL(string: "\($0)/Models")!, includingPropertiesForKeys: nil) })
+            .map { try! FileManager.default.contentsOfDirectory(at: URL(string: "\($0)/Models")!, includingPropertiesForKeys: nil) }
+            .filter{!$0.isEmpty})
         
         return scanFolder
     }
     
+    static func returnModelURL(type: String) -> [[URL]]{
+        do{
+            let url = try FileManager.default.contentsOfDirectory(at: rootScansFolder()!, includingPropertiesForKeys: nil)
+                .map { try FileManager.default.contentsOfDirectory(at: URL(string: "\($0)/\(type)")!, includingPropertiesForKeys: nil) }
+                .filter{!$0.isEmpty}
+            return url
+        }catch{
+            print(error)
+        }
+        return []
+    }
     
 }
