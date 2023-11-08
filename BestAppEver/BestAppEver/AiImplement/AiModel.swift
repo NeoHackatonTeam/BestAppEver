@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct AiModel: Decodable{
+    let caption: CaptionModel
+}
+
+struct CaptionModel: Decodable{
+    let text: String
+}
