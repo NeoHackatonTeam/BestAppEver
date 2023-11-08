@@ -23,18 +23,11 @@ class DatabaseViewModel{
     }
     
     
-    func startEncode(_ item: FBDataModel){
-        //TODO: Utiliser la réponse de l'IA pour remplir la description
-        aiPrompt.askToAi(item: item){item in
-            addToDatabase(item)
-        }
-    }
-    
-    private func addToDatabase(_ item: FBDataModel){
+    func addToDatabase(_ item: FBDataModel){
         var ref: DocumentReference? = nil
         ref = db.collection(namespaceCollection).addDocument(data: [
             "name": item.name,
-            "description": item.description,
+            "description": aiPrompt.askToAi(urlImage: item.urlImage),
             "url_image": item.urlImage,
             "url_model": item.urlModele])
         { err in

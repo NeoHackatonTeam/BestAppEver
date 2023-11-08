@@ -15,7 +15,6 @@
 		EA57DF862AFA652E00BA8E8A /* LibrairyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF852AFA652E00BA8E8A /* LibrairyCell.swift */; };
 		EA57DF882AFA6E8900BA8E8A /* LibrairyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF872AFA6E8900BA8E8A /* LibrairyDetailView.swift */; };
 		EA57DF8C2AFA894B00BA8E8A /* DatabaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF8B2AFA894B00BA8E8A /* DatabaseViewModel.swift */; };
-		EA57DF902AFAA6EE00BA8E8A /* DatabaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA57DF8F2AFAA6EE00BA8E8A /* DatabaseView.swift */; };
 		EA57DF942AFADB2D00BA8E8A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA57DF932AFADB2D00BA8E8A /* GoogleService-Info.plist */; };
 		F15AF8802AFA3EAD00C6126A /* BestAppEverApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */; };
 		F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F15AF8812AFA3EAD00C6126A /* ContentView.swift */; };
@@ -39,7 +38,6 @@
 		EA57DF852AFA652E00BA8E8A /* LibrairyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyCell.swift; sourceTree = "<group>"; };
 		EA57DF872AFA6E8900BA8E8A /* LibrairyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibrairyDetailView.swift; sourceTree = "<group>"; };
 		EA57DF8B2AFA894B00BA8E8A /* DatabaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseViewModel.swift; sourceTree = "<group>"; };
-		EA57DF8F2AFAA6EE00BA8E8A /* DatabaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseView.swift; sourceTree = "<group>"; };
 		EA57DF932AFADB2D00BA8E8A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		F15AF87C2AFA3EAD00C6126A /* BestAppEver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BestAppEver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F15AF87F2AFA3EAD00C6126A /* BestAppEverApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestAppEverApp.swift; sourceTree = "<group>"; };
@@ -97,7 +95,6 @@
 			isa = PBXGroup;
 			children = (
 				EA57DF8B2AFA894B00BA8E8A /* DatabaseViewModel.swift */,
-				EA57DF8F2AFAA6EE00BA8E8A /* DatabaseView.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -283,7 +280,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F15AF8932AFA406600C6126A /* OCMainView.swift in Sources */,
-				EA57DF902AFAA6EE00BA8E8A /* DatabaseView.swift in Sources */,
 				F15AF8822AFA3EAD00C6126A /* ContentView.swift in Sources */,
 				EA373CA62AFB999000D57495 /* AiModel.swift in Sources */,
 				EA57DF8C2AFA894B00BA8E8A /* DatabaseViewModel.swift in Sources */,

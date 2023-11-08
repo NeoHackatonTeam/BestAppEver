@@ -24,11 +24,7 @@ struct ContentView: View {
                     .tabItem {
                         Image(systemName: "camera")
                     }
-                
-                DatabaseView()
-                    .tabItem {
-                        Image(systemName: "person.fill.questionmark")
-                    }
+        
 
             }
             .toolbarBackground(.black, for: .tabBar)
