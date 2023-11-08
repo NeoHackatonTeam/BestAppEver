@@ -19,7 +19,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct BestAppEverApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
     @StateObject var appModel = AppDataModel.instance
     
     var body: some Scene {

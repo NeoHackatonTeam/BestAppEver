@@ -9,11 +9,11 @@ import Foundation
 
 struct FBDataModel: Identifiable{
     var id: String = ""
-    let url: URL? //distant
-    let modelURL: URL? //distant
+    var urlImage: String
+    var urlModel: String
+    var name: String
+    var description: String
     let localModelURL: URL?
-    let name: String
-    let description: String
     
     init(id:String, url: URL?, modelURL: URL?, localeModelURL: URL?, name: String, description: String) {
         self.id = id //généré
