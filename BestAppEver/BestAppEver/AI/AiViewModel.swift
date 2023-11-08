@@ -13,12 +13,14 @@ class AiViewModel{
     
     let api_key = "7FCADDCD-EA27-409C-98B8-CF37895530370A00049C-B9AE-4DD8-8803-19151FD3E7EF"
     
-    func askToAi(item: FBDataModel, action: (FBDataModel) -> Void){
+    func askToAi(urlImage: String) -> String{
+        
+        var result = ""
         
         let jsonData = [
             "tkn": api_key,
             "modelVersion": "2.1_full",
-            "input": item.urlImage,
+            "input": urlImage,
             "visionParams": "describe_all",
             "gpt_prompt": "",
             "gpt_length": "125"
@@ -42,12 +44,11 @@ class AiViewModel{
             } else if let data = data {
                 
                 let product = try? JSONDecoder().decode(AiModel.self, from: data)
-                item.description = product?.caption.text ?? "Mode free is Over"
-                action(item)
-                
+                result = product?.caption.text ?? "Mode free is Over"
             }
         }
         
         task.resume()
+        return result
     }
 }
