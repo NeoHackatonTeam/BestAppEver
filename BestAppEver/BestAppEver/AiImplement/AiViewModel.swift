@@ -11,7 +11,6 @@ import Foundation
 
 class AiViewModel{
     
-    //let api_key = "A60443F7-A556-4B79-B226-5E78ACA7B50F8F13A6D5-EACC-4ABA-B021-E1F9B675EB0A"
     let api_key = "7FCADDCD-EA27-409C-98B8-CF37895530370A00049C-B9AE-4DD8-8803-19151FD3E7EF"
     
     func startConnect(){
@@ -41,8 +40,7 @@ class AiViewModel{
             if let error = error {
                 print(error)
             } else if let data = data {
-                //data.
-                //let str = String(data: data, encoding: .utf8)
+                
                 let product = try? JSONDecoder().decode(AiModel.self, from: data)
                 print(product?.caption.text ?? "Mode Free Over")
                 
