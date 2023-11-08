@@ -9,10 +9,11 @@ import SwiftUI
 
 struct LibrairyCell: View {
     let model :FBDataModel
+    @State var url :URL = URL(string: "")!
     
     var body: some View {
         HStack{
-            AsyncImage(url: model.url){ img in
+            AsyncImage(url: url){ img in
                 img
                     .resizable()
                     .aspectRatio(contentMode: .fit)
@@ -33,6 +34,16 @@ struct LibrairyCell: View {
             .foregroundColor(.black)
 
             Spacer()
+        }
+        .onAppear{
+            ReposStorage.instance.loadFile(typeFile: FileType.image, nameFile: model.urlImage) { result in
+                switch result {
+                case .success(let imageFilename):
+                    url = imageFilename
+                case .failure:
+                    break
+                }
+            }
         }
     }
 }

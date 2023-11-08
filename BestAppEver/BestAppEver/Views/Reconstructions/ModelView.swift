@@ -15,9 +15,25 @@ import os
 struct ModelView: View {
     let modelFile: URL
     let endCaptureCallback: () -> Void
+    @State var trueModelFile :URL = URL(string: "")!
 
     var body: some View {
-        ARQuickLookController(modelFile: modelFile, endCaptureCallback: endCaptureCallback)
+        if trueModelFile.absoluteString != ""{
+            ARQuickLookController(modelFile: trueModelFile, endCaptureCallback: endCaptureCallback)
+                .onAppear{
+                    ReposStorage.instance.loadFile(typeFile: FileType.objet3d, nameFile: modelFile.absoluteString) { result in
+                        switch result {
+                        case .success(let imageFilename):
+                            trueModelFile = imageFilename
+                        case .failure:
+                            break
+                        }
+                    }
+                }
+        }
+        else{
+            Text("Wait for it")
+        }
     }
 }
 

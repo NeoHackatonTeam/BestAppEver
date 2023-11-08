@@ -32,14 +32,27 @@ class AppDataModel: ObservableObject, Identifiable {
         }
     }
     
+    func initModelList(){
+        modelsList = DatabaseViewModel.instance.getListToDatabase()
+        print(modelsList)
+    }
+    
     func addNewModel(image: URL, model: URL, name: String){
-        var newModel = FBDataModel(id: "\(modelsList.count + 1)",
-                                   url: image,
-                                   modelURL: model,
-                                   localeModelURL: model,
-                                   name: name,
-                                   description: "Description")
-        modelsList.append(newModel)
+        ReposStorage.instance.saveFile(localURL: image, typeFile: FileType.image) { result in
+            switch result {
+            case .success(let imageFilename):
+                ReposStorage.instance.saveFile(localURL: model, typeFile: FileType.objet3d) { result in
+                    switch result {
+                    case .success(let modelFilename):
+                        DatabaseViewModel.instance.addToDatabase(imageFilename, modelFilename, name: name)
+                    case .failure:
+                        break
+                    }
+                }
+            case .failure:
+                break
+            }
+        }
     }
     /// The object that manages the reconstruction process of a set of images of an object into a 3D model.
     ///

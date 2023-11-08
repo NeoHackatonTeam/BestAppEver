@@ -18,19 +18,21 @@ struct LibrairyView: View {
                     ForEach(data.modelsList){ model in
                         NavigationLink{
                             if let folderManager = data.scanFolderManager {
-                                ModelView(modelFile: model.localModelURL!){}
+                                ModelView(modelFile: URL(string: model.urlModele)!){}
                             }
                         } label: {
                             LibrairyCell(model: model)
                         }
-                        
                     }
                 }
+            }
+            .onAppear{
+                data.initModelList()
             }
         }
     }
 }
 
-#Preview {
-    LibrairyView()
-}
+//#Preview {
+//    LibrairyView()
+//}
